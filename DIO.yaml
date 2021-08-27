@@ -1,0 +1,15 @@
+transfer_layer:
+  - name: Bias
+    type: Visa
+    init:
+      resource_name: ASRLCOM7
+      timeout : 5000
+      read_termination: "\r"
+      baud_rate: 19200
+      backend: '@py'
+hw_drivers:
+  - name      : BIAS
+    type      : scpi
+    interface : Bias
+    init      :
+        device : Keithley 2410
